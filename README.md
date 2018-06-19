@@ -6,3 +6,4 @@ copy `myCA.pem` out and install where you need it, might be helpful to change th
 ## Generating certificates
 1. `mkdir mysite && cd mysite`
 2. `/path/to/sign.sh`
+3. Export out `crt` (certificate) and `key` (private key) to your webserver
