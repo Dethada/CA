@@ -1,9 +1,7 @@
 #!/bin/sh
 
-# generate site private key
-openssl genrsa -out key 4096
-# generate CSR using site private key
-openssl req -new -key key -out csr
+# generate site private key and csr
+openssl req -out csr -new -newkey rsa:4096 -nodes -keyout key
 
 # requires a ext file
 # openssl x509 -req -in csr -CA ~/myCA.pem -CAkey ~/myCA.key -CAcreateserial -out crt -days 1825 -sha256 -extfile ext
